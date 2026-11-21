@@ -175,6 +175,50 @@ implementation details:
 Do not assume that the visible constant values are PID gains; they are
 signal constants in the displayed model.
 
+
+## PID Controller Configuration
+
+A discrete-time PID controller is implemented in Simulink to regulate motor response using angular feedback. The controller combines proportional, integral, and filtered derivative actions to improve stabilization, minimize steady-state error, and control transient response.
+
+### PID Controller Parameters
+
+The controller is configured in Ideal form with a filtered derivative term.
+
+| Parameter | Value |
+|---|---:|
+| Controller Type | PID |
+| Controller Form | Ideal |
+| Kp | 500 |
+| Ki | 300 |
+| Kd | 0.01 |
+| Filter Coefficient (N) | 100 |
+| Sample Time | Inherited (-1) |
+
+![PID Controller Configuration](Cse_project/Screenshot%202026-11-21%20214625.png)
+
+### Integrator and Filter Initialization
+
+Internal initial conditions are configured to define the starting states of the integrator and derivative filter.
+
+- Integrator Initial Condition: 95
+- Filter Initial Condition: 95
+- External Reset: None
+- Tracking Mode: Disabled
+
+![PID Initialization](Cse_project/Screenshot%202026-11-21%20213620.png)
+
+### Output Saturation and Anti-Windup
+
+Output saturation is enabled to keep the controller command within the configured operating range. The clamping anti-windup method helps prevent excessive integral accumulation when the output reaches its limits.
+
+- Upper Output Limit: 118
+- Lower Output Limit: 95
+- Anti-Windup Method: Clamping
+- Integrator Saturation: Disabled
+
+![PID Saturation Configuration](Cse_project/Screenshot%202026-11-21%20213632.png)
+
+
 ## How to Run
 
 1.  Install MATLAB and Simulink, along with the Arduino support package

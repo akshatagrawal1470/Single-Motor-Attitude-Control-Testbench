@@ -54,9 +54,7 @@ The model is organized around these functional stages:
 
 ### Top-level Simulink model
 
-![Top-level Simulink
-model](Cse_project/Screenshot 2026-11-21 212036.png)
-
+![Top-level Simulink model](Cse_project/Screenshot%202026-11-21%20212036.png)
 *Figure 1. Top-level model showing the reference/error path, PID block,
 sensor/attitude subsystem, moving-average block, and output monitoring.*
 

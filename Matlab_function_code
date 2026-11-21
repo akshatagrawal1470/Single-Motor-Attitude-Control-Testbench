@@ -1,0 +1,76 @@
+
+function [Roll, Pitch, Yaw] = attitude(Accel, AngRate)
+
+% Lightweight scalar Kalman filter
+% Sampling frequency = 50 Hz
+
+persistent roll pitch yaw
+persistent Pr Pp
+
+Ts = single(0.02);
+
+Q = single(0.001);
+R = single(0.03);
+
+if isempty(roll)
+
+    ax = single(Accel(1));
+    ay = single(Accel(2));
+    az = single(Accel(3));
+
+    roll = atan2(ay,az);
+
+    pitch = atan2(-ax,sqrt(ay*ay + az*az));
+
+    yaw = single(0);
+
+    Pr = single(1);
+    Pp = single(1);
+
+end
+
+% Accelerometer measurements
+ax = single(Accel(1));
+ay = single(Accel(2));
+az = single(Accel(3));
+
+accRoll = atan2(ay,az);
+
+accPitch = atan2(-ax,sqrt(ay*ay + az*az));
+
+% Gyroscope measurements
+gx = single(AngRate(1))*single(0.017453293);
+gy = single(AngRate(2))*single(0.017453293);
+gz = single(AngRate(3))*single(0.017453293);
+
+% ROLL FILTER
+rollPred = roll + gx*Ts;
+
+Pr = Pr + Q;
+
+Kr = Pr/(Pr+R);
+
+roll = rollPred + Kr*(accRoll-rollPred);
+
+Pr = (single(1)-Kr)*Pr;
+
+% PITCH FILTER
+pitchPred = pitch + gy*Ts;
+
+Pp = Pp + Q;
+
+Kp = Pp/(Pp+R);
+
+pitch = pitchPred + Kp*(accPitch-pitchPred);
+
+Pp = (single(1)-Kp)*Pp;
+
+% YAW
+yaw = yaw + gz*Ts;
+
+% Output in degrees
+Roll = roll*single(57.29578);
+Pitch = pitch*single(57.29578);
+Yaw = yaw*single(57.29578);
+
+end

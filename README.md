@@ -119,8 +119,7 @@ The supplied block configuration shows:
   Samples per frame         1
   Sample time               `-1` (inherited)
 
-![MPU6050 block
-configuration](Cse_project/Screenshot%2026-11-21%212142.png)
+![MPU6050 Configuration](Cse_project/Screenshot%202026-11-21%20212142.png)
 
 *Figure 4. MPU6050 I²C and sensor-range configuration in Simulink.*
 
@@ -144,7 +143,7 @@ specific estimation algorithm. Document the actual algorithm (for
 example, complementary filter or Kalman filter) only after confirming
 the implementation.
 
-![MPU6050 Configuration](Cse_project/Screenshot%202026-11-21%20212142.png)
+![Attitude MATLAB Function Block](Cse_project/Screenshot%202026-11-21%20212207.png)
 *Figure 5. Attitude MATLAB Function block and its Roll, Pitch, and Yaw
 outputs.*
 

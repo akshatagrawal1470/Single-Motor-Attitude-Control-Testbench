@@ -93,9 +93,7 @@ are exposed as outputs.*
 
 ### MPU6050 and attitude-processing flow
 
-![MPU6050 and attitude
-processing](assets/screenshots/03-mpu6050-and-attitude-function.png)
-
+![MPU6050 and Attitude Processing](Cse_project/Screenshot%202026-11-21%20212126.png)
 *Figure 3. Detailed view of the MPU6050 sensor signals feeding the
 attitude MATLAB Function block. Accelerometer and angular-rate signals
 are connected to the estimator; temperature and status are routed

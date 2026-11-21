@@ -10,6 +10,14 @@ experimental setup.
 > dimensions, and measured performance are not included here; add those
 > details when you have verified them.
 
+## Project Demonstration
+
+Watch the complete working demonstration of the Single-Motor Drone Stabilization Testbench:
+
+[![Watch Demonstration](https://img.youtube.com/vi/kyCSl8Z6iH0/0.jpg)](https://youtu.be/kyCSl8Z6iH0)
+
+[Watch on YouTube](https://youtu.be/kyCSl8Z6iH0)
+
 ## Table of Contents
 
 -   [Overview](#overview)

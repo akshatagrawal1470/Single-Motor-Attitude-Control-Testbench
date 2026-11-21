@@ -124,7 +124,7 @@ The supplied block configuration shows:
   Sample time               `-1` (inherited)
 
 ![MPU6050 block
-configuration](assets/screenshots/04-mpu6050-configuration.png)
+configuration](Cse_project/Screenshot%2026-11-21%212142.png)
 
 *Figure 4. MPU6050 I²C and sensor-range configuration in Simulink.*
 

@@ -86,9 +86,7 @@ monitoring.
 
 ### Sensor and attitude subsystem
 
-![Sensor and attitude
-subsystem](assets/screenshots/02-sensor-and-attitude-subsystem.png)
-
+![Sensor and Attitude Subsystem](Cse_project/Screenshot%202026-11-21%20212115.png)
 *Figure 2. Subsystem-level view showing the Arduino MPU6050 input and
 the attitude-processing block. Roll, Pitch, Temperature, Status, and Yaw
 are exposed as outputs.*

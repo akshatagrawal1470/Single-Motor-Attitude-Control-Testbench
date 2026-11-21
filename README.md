@@ -144,9 +144,7 @@ specific estimation algorithm. Document the actual algorithm (for
 example, complementary filter or Kalman filter) only after confirming
 the implementation.
 
-![Attitude MATLAB Function
-block](assets/screenshots/05-attitude-matlab-function-block.png)
-
+![MPU6050 Configuration](Cse_project/Screenshot%202026-11-21%20212142.png)
 *Figure 5. Attitude MATLAB Function block and its Roll, Pitch, and Yaw
 outputs.*
 
